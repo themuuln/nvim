@@ -60,7 +60,7 @@ packer.startup(function(use)
 
 	--
 	--
-	-- Themuuln's cfg
+	-- Themuuln's additional cfg
 	--
 	--
 
@@ -87,5 +87,10 @@ packer.startup(function(use)
 	use({
 		"lewis6991/impatient.nvim",
 		config = [[require('config.impatient')]],
+	})
+	-- ES7+ React/Redux/React-Native/JS snippets
+	use({
+		"dsznajder/vscode-es7-javascript-react-snippets",
+		run = "yarn install --frozen-lockfile && yarn compile",
 	})
 end)
