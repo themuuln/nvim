@@ -13,10 +13,6 @@ end
 
 packer.startup(function(use)
 	use("wbthomason/packer.nvim")
-	use({
-		"svrana/neosolarized.nvim",
-		requires = { "tjdevries/colorbuddy.nvim" },
-	})
 	use("nvim-lualine/lualine.nvim") -- Statusline
 	use({
 		"williamboman/nvim-lsp-installer",
@@ -93,4 +89,7 @@ packer.startup(function(use)
 		"dsznajder/vscode-es7-javascript-react-snippets",
 		run = "yarn install --frozen-lockfile && yarn compile",
 	})
+	use("navarasu/onedark.nvim")
+	-- git blame ( GitLens )
+	use({ "kessejones/git-blame-line.nvim" })
 end)

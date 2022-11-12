@@ -1,6 +1,7 @@
 vim.cmd('autocmd!')
 
 vim.wo.number = true
+vim.wo.relativenumber = 'number'
 
 vim.opt.title = true
 vim.opt.autoindent = true
