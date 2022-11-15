@@ -1,3 +1,4 @@
+require("impatient")
 require("themuuln.base")
 require("themuuln.highlights")
 require("themuuln.maps")

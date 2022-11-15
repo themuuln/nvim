@@ -58,6 +58,10 @@ packer.startup(function(use)
 	use("tpope/vim-surround")
 	use("vim-scripts/ReplaceWithRegister")
 
+	-- Commenting stuff
+	--
+	-- way to speed up your Neovim startup time.
+	use("lewis6991/impatient.nvim")
 	-- commenting with gc
 	use("numToStr/Comment.nvim")
 
@@ -74,17 +78,14 @@ packer.startup(function(use)
 	-- configuring lsp server ADDITIONAL
 	use("jose-elias-alvarez/typescript.nvim")
 
-	-- way to speed up your Neovim startup time.
-	use({
-		"lewis6991/impatient.nvim",
-		config = [[require('config.impatient')]],
-	})
 	-- ES7+ React/Redux/React-Native/JS snippets
 	use({
 		"dsznajder/vscode-es7-javascript-react-snippets",
 		run = "yarn install --frozen-lockfile && yarn compile",
 	})
 	use("navarasu/onedark.nvim")
-	-- git blame ( GitLens )
+	--other
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+	-- gitlens vim edition lol
 	use({ "kessejones/git-blame-line.nvim" })
 end)
