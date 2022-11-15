@@ -1,16 +1,16 @@
-require("craftzdog.base")
-require("craftzdog.highlights")
-require("craftzdog.maps")
-require("craftzdog.plugins")
-require("craftzdog.windows")
+require("themuuln.base")
+require("themuuln.highlights")
+require("themuuln.maps")
+require("themuuln.plugins")
+require("themuuln.windows")
 
 local has = vim.fn.has
 local is_mac = has("macunix")
 local is_win = has("win32")
 
 if is_mac then
-	require("craftzdog.macos")
+	require("themuuln.macos")
 end
 if is_win then
-	require("craftzdog.windows")
+	require("themuuln.windows")
 end
