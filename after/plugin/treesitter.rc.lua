@@ -16,11 +16,11 @@ ts.setup({
 
 	highlight = {
 		enable = true,
-		disable = {},
+		disable = { " " },
 	},
 	indent = {
 		enable = true,
-		disable = {},
+		disable = { "yaml" },
 	},
 	ensure_installed = {
 		"tsx",

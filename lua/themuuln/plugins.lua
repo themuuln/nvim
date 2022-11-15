@@ -88,4 +88,6 @@ packer.startup(function(use)
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	-- gitlens vim edition lol
 	use({ "kessejones/git-blame-line.nvim" })
+	-- rainbow parentheses
+	use("p00f/nvim-ts-rainbow")
 end)
