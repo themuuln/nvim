@@ -6,11 +6,6 @@ end
 
 vim.cmd([[packadd packer.nvim]])
 
-local status, packer = pcall(require, "packer")
-if not status then
-	return
-end
-
 packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lualine/lualine.nvim") -- Statusline
