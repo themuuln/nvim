@@ -90,4 +90,12 @@ packer.startup(function(use)
 	use({ "kessejones/git-blame-line.nvim" })
 	-- rainbow parentheses
 	use("p00f/nvim-ts-rainbow")
+	-- toggleterm terminal in vim
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 end)
