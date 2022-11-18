@@ -3,6 +3,7 @@ if not status then
 	print("Packer is not installed")
 	return
 end
+--TODO
 
 vim.cmd([[packadd packer.nvim]])
 
@@ -98,4 +99,10 @@ packer.startup(function(use)
 			require("toggleterm").setup()
 		end,
 	})
+	-- lsp colors
+	use("folke/lsp-colors.nvim")
+
+	use("nvim-treesitter/nvim-treesitter-context")
+	-- discord presence
+	use("andweeb/presence.nvim")
 end)

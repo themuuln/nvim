@@ -8,7 +8,7 @@ ts.setup({
 	-- nvim-ts-rainbow bracket plugin
 	rainbow = {
 		enable = true,
-		extended_mode = true,
+		extended_mode = false,
 		max_file_lines = nil,
 		colors = {}, -- table of hex strings
 		-- termcolors = {} -- table of colour name strings
