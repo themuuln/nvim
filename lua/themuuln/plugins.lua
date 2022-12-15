@@ -3,7 +3,6 @@ if not status then
 	print("Packer is not installed")
 	return
 end
---TODO
 
 vim.cmd([[packadd packer.nvim]])
 
@@ -50,17 +49,11 @@ packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("dinhhuy258/git.nvim") -- For git blame & browse
 
-	--
-	--
 	-- Themuuln's additional cfg
-	--
-	--
 
 	use("tpope/vim-surround")
 	use("vim-scripts/ReplaceWithRegister")
 
-	-- Commenting stuff
-	--
 	-- way to speed up your Neovim startup time.
 	use("lewis6991/impatient.nvim")
 	-- commenting with gc
@@ -103,6 +96,10 @@ packer.startup(function(use)
 	use("folke/lsp-colors.nvim")
 
 	use("nvim-treesitter/nvim-treesitter-context")
-	-- discord presence
-	use("andweeb/presence.nvim")
+	use({
+		"folke/which-key.nvim",
+		config = function()
+			require("which-key").setup({})
+		end,
+	})
 end)
