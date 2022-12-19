@@ -44,8 +44,6 @@ packer.startup(function(use)
 		end,
 	})
 	use("akinsho/nvim-bufferline.lua")
-	-- use 'github/copilot.vim'
-
 	use("lewis6991/gitsigns.nvim")
 	use("dinhhuy258/git.nvim") -- For git blame & browse
 
@@ -54,48 +52,33 @@ packer.startup(function(use)
 	use("tpope/vim-surround")
 	use("vim-scripts/ReplaceWithRegister")
 
-	-- way to speed up your Neovim startup time.
-	use("lewis6991/impatient.nvim")
-	-- commenting with gc
-	use("numToStr/Comment.nvim")
-
-	-- file explorer
-	use("nvim-tree/nvim-tree.lua")
-
-	-- autocompletion
-	use("hrsh7th/cmp-path")
-
-	-- snippets
+	use("lewis6991/impatient.nvim") -- way to speed up your Neovim startup time.
+	use("numToStr/Comment.nvim") -- commenting with gc
+	use("nvim-tree/nvim-tree.lua") -- file explorer
+	use("hrsh7th/cmp-path") -- autocompletion
 	use("saadparwaiz1/cmp_luasnip")
-	use("rafamadriz/friendly-snippets")
-
-	-- configuring lsp server ADDITIONAL
-	use("jose-elias-alvarez/typescript.nvim")
-
-	-- ES7+ React/Redux/React-Native/JS snippets
+	use("rafamadriz/friendly-snippets") -- snippets
+	use("jose-elias-alvarez/typescript.nvim") -- configuring lsp server ADDITIONAL
 	use({
 		"dsznajder/vscode-es7-javascript-react-snippets",
 		run = "yarn install --frozen-lockfile && yarn compile",
-	})
-	use("navarasu/onedark.nvim")
+	}) -- ES7+ React/Redux/React-Native/JS snippets
+	use("navarasu/onedark.nvim") -- onedark theme
 	--other
-	use("JoosepAlviste/nvim-ts-context-commentstring")
-	-- gitlens vim edition lol
-	use({ "kessejones/git-blame-line.nvim" })
-	-- rainbow parentheses
-	use("p00f/nvim-ts-rainbow")
-	-- toggleterm terminal in vim
+	use("JoosepAlviste/nvim-ts-context-commentstring") -- commenting
+	use({ "kessejones/git-blame-line.nvim" }) -- gitlens vim edition lol
+	use("p00f/nvim-ts-rainbow") -- rainbow parentheses
 	use({
 		"akinsho/toggleterm.nvim",
 		tag = "*",
 		config = function()
 			require("toggleterm").setup()
 		end,
-	})
-	-- lsp colors
-	use("folke/lsp-colors.nvim")
-
+	}) -- toggleterm terminal in vim
+	use("folke/lsp-colors.nvim") -- lsp colors
 	use("nvim-treesitter/nvim-treesitter-context")
+	use("lukas-reineke/indent-blankline.nvim") -- indent blankline
+	use("karb94/neoscroll.nvim") -- smooth scrolling
 	use({
 		"folke/which-key.nvim",
 		config = function()
