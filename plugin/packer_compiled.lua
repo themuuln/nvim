@@ -295,6 +295,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",

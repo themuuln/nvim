@@ -79,6 +79,8 @@ packer.startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-context")
 	use("lukas-reineke/indent-blankline.nvim") -- indent blankline
 	use("karb94/neoscroll.nvim") -- smooth scrolling
+	use("RRethy/vim-illuminate") -- highlight word under the cursor
+	use("andymass/vim-matchup") -- % improved
 	use({
 		"folke/which-key.nvim",
 		config = function()
