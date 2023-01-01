@@ -254,11 +254,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\onedark.nvim",
-    url = "https://github.com/navarasu/onedark.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
@@ -273,6 +268,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
+  ["structlog.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\structlog.nvim",
+    url = "https://github.com/Tastyep/structlog.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
@@ -299,6 +299,15 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
+  },
+  ["vim-matchup"] = {
+    after_files = { "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\vim-matchup\\after\\plugin\\matchit.vim" },
+    config = { "\27LJ\2\nN\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\0\1\vmethod\npopup!matchup_matchparen_offscreen\6g\bvim\0" },
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "C:\\Users\\zeron\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\vim-matchup",
+    url = "https://github.com/andymass/vim-matchup"
   },
   ["vim-surround"] = {
     loaded = true,
@@ -332,6 +341,13 @@ time([[Config for toggleterm.nvim]], false)
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au CursorMoved * ++once lua require("packer.load")({'vim-matchup'}, { event = "CursorMoved *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
