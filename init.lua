@@ -1,9 +1,9 @@
-require("impatient")
 require("themuuln.base")
 require("themuuln.highlights")
 require("themuuln.maps")
 require("themuuln.plugins")
 require("themuuln.windows")
+require("impatient")
 
 local has = vim.fn.has
 local is_mac = has("macunix")
